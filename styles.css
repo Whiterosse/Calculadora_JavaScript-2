@@ -1,0 +1,96 @@
+@font-face{
+    font-family: 'DS-Digital-Bold';
+    src: url('fonts/DS-DIGIB.TTF');
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(64, 146, 218);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#calculator{
+    background-color: #575757 ;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 30px 0 30px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 0px #424242 ;
+}
+
+#calculator::after{ /* usado para rellenar el lateral abajo izquierdo*/
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    background-color: #424242;
+    transform: rotate(45deg);
+    margin-left: -29px;
+    margin-top: -2px;
+    z-index: -1;
+}
+
+#calculator::before{ /* usado para rellenar el lateral arriba derecho*/
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    background-color: #424242;
+    transform: rotate(45deg);
+    margin-left: 460px;
+    margin-top: -20px;
+    z-index: -1;
+}
+
+#calculator > .operands {
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    background-color: antiquewhite;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 70px;
+    font-family: 'DS-Digital-Bold';
+}
+
+#calculator > .operands > [data-operand-1]{
+    font-size: 50px;
+}
+
+#calculator .btn-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#calculator > .btn-grid > button{
+    padding: 10px;
+    background-color: #ececec;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: #c9c9c9;
+    font-size: 25px;
+}
+
+#calculator > .btn-grid > button:nth-child(2){
+    grid-column: span 2;
+}
+
+#calculator > .btn-grid > button:last-child{
+    grid-column: span 2;
+    background-color: #f5a34d;
+    border-color: #ce812a;
+}
+
+#copy{
+    font-size: 12px;
+    padding: 10px;
+    color: #ccc;
+    text-align: center;
+}
