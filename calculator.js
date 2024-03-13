@@ -23,10 +23,8 @@ class Calculator{
         this.operand2 = this.operand2 === 0
                         ? number
                         : this.operand2.toString() + number;
-
         this.updateUI();
     }
-
 
     delete(){
         if(this.operand2 === 0) return;
